@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd
